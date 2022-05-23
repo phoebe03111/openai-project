@@ -10,8 +10,7 @@ function App() {
   const [resultArray, setResultArray] = useState([]);
 
   const handleFormSubmit = (newResult) => {
-    console.log(newResult);
-    // setResultArray([...resultArray, newResult])
+    setResultArray([newResult, ...resultArray]);
   };
 
   return (
@@ -20,7 +19,7 @@ function App() {
         <h1>Fun with AI</h1>
       </header>
       <Form handleFormSubmit={handleFormSubmit} />
-      <ResponseList />
+      <ResponseList results={resultArray} />
     </>
   );
 }

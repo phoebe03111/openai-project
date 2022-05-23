@@ -31,10 +31,11 @@ const Form = ({ handleFormSubmit }) => {
       .then((res) => {
         const newResult = {
           id: uuid(),
-          product: input,
+          prompt: input,
           response: res.data.choices[0].text,
         };
         handleFormSubmit(newResult);
+        setInput('')
       })
       .catch((err) => console.log(err));
   };
