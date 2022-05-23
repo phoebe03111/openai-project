@@ -40,6 +40,9 @@
   }
 
   &__label {
+    @include center;
+    justify-content: flex-start;
+    gap: 0.3rem;
     color: white;
     font-size: 1.2rem;
   }
@@ -58,6 +61,7 @@
   &__example {
     color: lightgray;
     font-size: 0.9rem;
+    margin-top: -0.5rem;
   }
 
   &__button {
@@ -67,10 +71,12 @@
     border-radius: 4px;
     font-size: 1rem;
     color: white;
-    width: 5rem;
+    width: 6rem;
     margin: 0 auto;
     cursor: pointer;
     transition: all 0.3s ease;
+    @include center;
+    gap: 0.3rem;
 
     &:hover {
       transform: scale(0.95);

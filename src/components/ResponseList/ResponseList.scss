@@ -1,2 +1,40 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.response {
+  @include section_padding;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  @include tablet {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    max-width: 90%;
+  }
+
+  &__result {
+    border-bottom: 1px solid $color-secondary;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  &__prompt {
+    color: $color-primary;
+    margin-bottom: 0.5rem;
+  }
+
+  &__delete {
+    color: $color-primary;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}

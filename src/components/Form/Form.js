@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { v4 as uuid } from "uuid";
 import { DotWave } from "@uiball/loaders";
+import { FiSend } from "react-icons/fi";
+import { BsPencil } from "react-icons/bs";
 import { API_URL } from "../../App";
 import ai from "../../assets/image/ai.svg";
 import "./Form.scss";
@@ -52,7 +54,9 @@ const Form = ({ handleFormSubmit }) => {
       <div className="form__container">
         <img className="form__image" src={ai} alt="artificial intelligence" />
         <form className="form" onSubmit={handleSubmit}>
-          <label className="form__label">Enter a text prompt</label>
+          <label className="form__label">
+            <BsPencil /> Enter a text prompt
+          </label>
           <textarea
             type="text"
             name="prompt"
@@ -65,7 +69,7 @@ const Form = ({ handleFormSubmit }) => {
             flowers by the beach...)
           </p>
           <button type="submit" className="form__button">
-            submit
+            submit <FiSend />
           </button>
         </form>
       </div>

@@ -12,6 +12,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  margin-bottom: 3rem;
 }
 
 a {
@@ -19,6 +20,10 @@ a {
   color: inherit;
 }
 
-textarea, p {
+h1,
+h2,
+h3,
+textarea,
+p {
   line-height: 1.5;
 }
