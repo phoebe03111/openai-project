@@ -3,6 +3,7 @@ import axios from "axios";
 import { v4 as uuid } from "uuid";
 import { DotWave } from "@uiball/loaders";
 import { API_URL } from "../../App";
+import "./Form.scss";
 
 const Form = ({ handleFormSubmit }) => {
   const [input, setInput] = useState("");
@@ -47,7 +48,7 @@ const Form = ({ handleFormSubmit }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <label>Enter prompt</label>
         <input
           type="text"

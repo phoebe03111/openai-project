@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import "./App.css";
 import Form from "./components/Form/Form";
 import ResponseList from "./components/ResponseList/ResponseList";
+import "./App.scss";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 
 export const API_URL =
   "https://api.openai.com/v1/engines/text-curie-001/completions";
@@ -28,11 +30,14 @@ function App() {
 
   return (
     <>
-      <header>
-        <h1>Fun with AI</h1>
-      </header>
-      <Form handleFormSubmit={handleFormSubmit} />
-      <ResponseList results={resultArray} handleDelete={handleDelete} />
+      <Header />
+
+      <main>
+        <Form handleFormSubmit={handleFormSubmit} />
+        <ResponseList results={resultArray} handleDelete={handleDelete} />
+      </main>
+
+      <Footer />
     </>
   );
 }

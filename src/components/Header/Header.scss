@@ -1,0 +1,19 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+.header {
+  @include section-padding;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  &__logo {
+    font-family: "Josefin Sans", sans-serif;
+    color: $color-primary;
+    margin-bottom: 2rem;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
