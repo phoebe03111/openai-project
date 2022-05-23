@@ -21,13 +21,18 @@ function App() {
     setResultArray([newResult, ...resultArray]);
   };
 
+  const handleDelete = (resultId) => {
+    const updatedArray = resultArray.filter((result) => result.id !== resultId);
+    setResultArray(updatedArray);
+  };
+
   return (
     <>
       <header>
         <h1>Fun with AI</h1>
       </header>
       <Form handleFormSubmit={handleFormSubmit} />
-      <ResponseList results={resultArray} />
+      <ResponseList results={resultArray} handleDelete={handleDelete} />
     </>
   );
 }
