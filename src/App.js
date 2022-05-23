@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Form from "./components/Form/Form";
+import ResponseList from "./components/ResponseList/ResponseList";
+
+export const API_URL =
+  "https://api.openai.com/v1/engines/text-curie-001/completions";
 
 function App() {
+  const [resultArray, setResultArray] = useState([]);
+
+  const handleFormSubmit = (newResult) => {
+    console.log(newResult);
+    // setResultArray([...resultArray, newResult])
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <h1>Fun with AI</h1>
       </header>
-    </div>
+      <Form handleFormSubmit={handleFormSubmit} />
+      <ResponseList />
+    </>
   );
 }
 
