@@ -73,7 +73,11 @@ const Form = ({ handleFormSubmit }) => {
           </button>
         </form>
       </div>
-      {loading && <DotWave />}
+      {loading && (
+        <div className="loading">
+          <DotWave />
+        </div>
+      )}
     </>
   );
 };
