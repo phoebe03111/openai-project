@@ -1,7 +1,17 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-footer {
-    @include center;
-    gap: 0.5rem;
+.footer {
+  @include center;
+  gap: 0.5rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: $color-primary;
+  color: rgb(255, 253, 253);
+  padding: 0.5rem;
+
+  @include tablet {
+    padding: 1rem;
+  }
 }

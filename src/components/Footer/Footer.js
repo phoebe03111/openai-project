@@ -3,7 +3,7 @@ import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <span>Created by Phoebe Chang </span>
       <a
         href="https://github.com/phoebe03111/openai-project"

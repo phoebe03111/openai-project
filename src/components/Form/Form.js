@@ -3,6 +3,7 @@ import axios from "axios";
 import { v4 as uuid } from "uuid";
 import { DotWave } from "@uiball/loaders";
 import { API_URL } from "../../App";
+import ai from "../../assets/image/ai.svg";
 import "./Form.scss";
 
 const Form = ({ handleFormSubmit }) => {
@@ -48,16 +49,26 @@ const Form = ({ handleFormSubmit }) => {
 
   return (
     <>
-      <form className="form" onSubmit={handleSubmit}>
-        <label>Enter prompt</label>
-        <input
-          type="text"
-          name="prompt"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button type="submit">Get submit</button>
-      </form>
+      <div className="form__container">
+        <img className="form__image" src={ai} alt="artificial intelligence" />
+        <form className="form" onSubmit={handleSubmit}>
+          <label className="form__label">Enter a text prompt</label>
+          <textarea
+            type="text"
+            name="prompt"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="form__input"
+          />
+          <p className="form__example">
+            (i.e. Write a tagline for an ice cream shop; write a poem about
+            flowers by the beach...)
+          </p>
+          <button type="submit" className="form__button">
+            submit
+          </button>
+        </form>
+      </div>
       {loading && <DotWave />}
     </>
   );

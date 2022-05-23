@@ -12,10 +12,13 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  @include center;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+textarea, p {
+  line-height: 1.5;
 }
